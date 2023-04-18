@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "state-verification", "state-verification\state-verification.csproj", "{40AF69F0-2BFD-453B-A25B-BC4B50515AEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ordersystem", "ordersystem\ordersystem.csproj", "{40AF69F0-2BFD-453B-A25B-BC4B50515AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "state-verification-tests", "state-verification-tests\state-verification-tests.csproj", "{A0E25AC1-9A67-44EF-8334-7AC1093B642C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "behavior-verification-tests", "behavior-verification-tests\behavior-verification-tests.csproj", "{56C07283-ED87-4F86-9B65-5E33A826108C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "behavior-verification", "behavior-verification\behavior-verification.csproj", "{10D14DF5-0B75-4259-97A4-659A53450FC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ordersystemtests", "ordersystemtests\ordersystemtests.csproj", "{A0E25AC1-9A67-44EF-8334-7AC1093B642C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,13 +24,5 @@ Global
 		{A0E25AC1-9A67-44EF-8334-7AC1093B642C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E25AC1-9A67-44EF-8334-7AC1093B642C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E25AC1-9A67-44EF-8334-7AC1093B642C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56C07283-ED87-4F86-9B65-5E33A826108C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56C07283-ED87-4F86-9B65-5E33A826108C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56C07283-ED87-4F86-9B65-5E33A826108C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56C07283-ED87-4F86-9B65-5E33A826108C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10D14DF5-0B75-4259-97A4-659A53450FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10D14DF5-0B75-4259-97A4-659A53450FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10D14DF5-0B75-4259-97A4-659A53450FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10D14DF5-0B75-4259-97A4-659A53450FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
