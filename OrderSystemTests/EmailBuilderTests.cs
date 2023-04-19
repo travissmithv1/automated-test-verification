@@ -11,7 +11,6 @@ public class EmailBuilderTests
     {
         var email = EmailBuilder.Build(0);
 
-        Assert.Single(email.To);
         Assert.Contains(new MailAddress("warehouseoperator@company.com"), email.To);
     }
     

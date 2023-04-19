@@ -10,10 +10,10 @@ public interface IEmailService
 public class EmailService : IEmailService
 {
     private readonly SmtpClient _smtpClient;
-    
-    public EmailService()
+
+    public EmailService(SmtpClient smtpClient)
     {
-        _smtpClient = new SmtpClient("emailserver.com");
+        _smtpClient = smtpClient;
     }
     
     public void Send(MailMessage mailMessage)
