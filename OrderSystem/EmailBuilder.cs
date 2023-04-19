@@ -6,6 +6,7 @@ public static class EmailBuilder
     public static MailMessage Build(int orderQuantity)
     {
         var mailMessage = new MailMessage();
+        mailMessage.From = new MailAddress("noreply@company.com");
         mailMessage.To.Add("warehouseoperator@company.com");
         if (orderQuantity > 200)
         {

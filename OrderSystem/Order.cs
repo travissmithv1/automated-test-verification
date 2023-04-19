@@ -2,10 +2,16 @@ namespace OrderSystem;
 
 public class Order
 {
-    public int Quantity { get; set; }
+    private int Quantity { get; }
+    private IEmailService EmailService { get; }
 
-    public Order(int quantity)
+    public Order(int quantity) : this(new EmailService(), quantity)
     {
+    }
+
+    public Order(IEmailService emailService, int quantity)
+    {
+        EmailService = emailService;
         Quantity = quantity;
     }
 
@@ -13,6 +19,7 @@ public class Order
     {
         // Order is submitted to database; a unique order number is assigned
         var newOrderNumber = 1;
+        EmailService.Send(EmailBuilder.Build(Quantity));
         return newOrderNumber;
     }
 }
