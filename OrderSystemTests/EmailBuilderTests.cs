@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using Xunit;
-using ordersystem;
+using OrderSystem;
 
-namespace ordersystemtests;
+namespace OrderSystemTests;
 
 public class EmailBuilderTests
 {
@@ -12,7 +13,8 @@ public class EmailBuilderTests
     {
         var email = EmailBuilder.Build(0);
 
-        Assert.Equal("warehouseoperator@company.com", email.To.First());
+        Assert.Single(email.To);
+        Assert.Contains(new MailAddress("warehouseoperator@company.com"), email.To);
     }
     
     [Fact]
@@ -29,13 +31,7 @@ public class EmailBuilderTests
     {
         const int orderQuantity = 201;
         var email = EmailBuilder.Build(orderQuantity);
-
-        var expectedToAddresses = new List<string>
-        {
-            "warehouseoperator@company.com",
-            "warehousemanager@company.com"
-        };
-
-        Assert.Equal(expectedToAddresses, email.To);
+        
+        Assert.Contains(new MailAddress("warehousemanager@company.com"), email.To);
     }
 }

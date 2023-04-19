@@ -1,4 +1,4 @@
-namespace ordersystem;
+namespace OrderSystem;
 
 public class Email
 {
