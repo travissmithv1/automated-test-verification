@@ -5,10 +5,6 @@ public class Order
     private int Quantity { get; }
     private IEmailService EmailService { get; }
 
-    public Order(int quantity) : this(new EmailService(), quantity)
-    {
-    }
-
     public Order(IEmailService emailService, int quantity)
     {
         EmailService = emailService;
